@@ -94,7 +94,10 @@ public class GamePanel extends JPanel {
         //loop ถ้ากระสุนเลยขอบจอกระสุนจะหายไปและถูกลบ
         for (Iterator<Projection> it = projections.iterator(); it.hasNext();) {
             Projection pj = it.next();
-            if (pj.getX() < 0 || pj.getX() > Setting.WIDTH || pj.getY() < 0 || pj.getY() > Setting.HEIGHT) {
+            if (pj.getX() < 0 || 
+            pj.getX() > Setting.WIDTH || 
+            pj.getY() < 0 || 
+            pj.getY() > Setting.HEIGHT) {
                 it.remove();
                 continue;
             }
@@ -122,7 +125,10 @@ public class GamePanel extends JPanel {
     public void drawEnemy(Graphics2D g) {
         for (Iterator<Enemy> it = enemies.iterator(); it.hasNext();) {
             Enemy enemy = it.next();
-            if (enemy.getX() < 0 || enemy.getX() > Setting.WIDTH || enemy.getY() < 0 || enemy.getY() > Setting.HEIGHT) {
+            if (enemy.getX() < 0 || 
+            enemy.getX() > Setting.WIDTH || 
+            enemy.getY() < 0 || 
+            enemy.getY() > Setting.HEIGHT) {
                 it.remove();
                 continue;
             }
